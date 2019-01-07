@@ -1,0 +1,179 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>PSE_ols_Flicker.sikuli</h2> <a href="PSE_ols_Flicker.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">def</span> opentestImage():
+    <span class="skw">find</span>(<img src="1544008989694.png" />)
+    <span class="skw">doubleClick</span>(<img src="1544008989694.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">find</span>(<img src="1544009057642.png" />)
+    <span class="skw">click</span>(<img src="1544009057642.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">find</span>(<img src="1544009532015.png" />)
+    <span class="skw">doubleClick</span>(<img src="1544009532015.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">find</span>(<img src="1544081241042.png" />)
+    <span class="skw">click</span>(<img src="1544081241042.png" />)
+    <span class="skw">find</span>(<img src="1544009309405.png" />)
+    <span class="skw">click</span>(<img src="1544009309405.png" />)
+
+<span class="kw">def</span> validate():
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+    <span class="kw">if</span>(exists(<img src="1546510343472.png" />)):
+        <span class="skw">click</span>(<img src="1546510355499.png" />)
+        <span class="kw">print</span>(<span class="str">"Testcase Passed, Image Posted on Flicker"</span>)
+        exit()
+    <span class="kw">else</span>:
+        <span class="kw">print</span>(<span class="str">"Testcase Failed: Issue with Upload"</span>)
+        exit()
+
+<span class="kw">def</span> new_signin():
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">type</span>(<img src="1546509308011.png" />, <span class="str">"psetest2016"</span>)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">find</span>(<img src="1546509567993.png" />)
+    <span class="skw">click</span>(<img src="1546509567993.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">type</span>(<span class="str">"tester123"</span>)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">find</span>(<img src="1546509760538.png" />)
+    <span class="skw">click</span>(<img src="1546509760538.png" />)
+
+<span class="kw">def</span> already_signin():
+    <span class="skw">find</span>(<img src="1546511067650.png" />)
+    <span class="skw">click</span>(<img src="1546511067650.png" />)
+    <span class="skw">find</span>(<img src="1546509567993.png" />)
+    <span class="skw">click</span>(<img src="1546509567993.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">type</span>(<span class="str">"tester123"</span>)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="skw">find</span>(<img src="1546509760538.png" />)
+    <span class="skw">click</span>(<img src="1546509760538.png" />)
+
+<span class="kw">def</span> authorizeAndUpload():
+    <span class="skw">find</span>(<img src="1546510708688.png" />)
+    <span class="skw">click</span>(<img src="1546510708688.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    <span class="kw">if</span>(exists(<img src="1546509932833.png" />)):
+        <span class="skw">find</span>(<img src="1546509987077.png" />)
+        <span class="skw">click</span>(<img src="1546509987077.png" />)
+        <span class="skw">find</span>(<img src="1546510030570.png" />)
+        <span class="skw">click</span>(<img src="1546510042054.png" />)
+        <span class="skw">wait</span>(<span class="dig">10</span>)
+        <span class="kw">if</span>(exists(<img src="1546510148231.png" />)):
+            <span class="skw">find</span>(<img src="1546510211437.png" />)
+            <span class="skw">click</span>(<img src="1546510211437.png" />)
+
+<span class="kw">def</span> basicUploadWorkFlow():
+    <span class="kw">if</span>(exists(<img src="1546509279794.png" />)):
+        new_signin()
+        <span class="skw">wait</span>(<span class="dig">5</span>)
+        <span class="kw">if</span>(exists(<img src="1546509863556.png" />)):
+            authorizeAndUpload()
+            <span class="skw">wait</span>(<span class="dig">10</span>)
+            validate()
+    <span class="kw">elif</span>(exists(<img src="1546511043912.png" />)):
+        already_signin()
+        <span class="skw">wait</span>(<span class="dig">5</span>)
+        <span class="kw">if</span>(exists(<img src="1546509863556.png" />)):
+            authorizeAndUpload()
+            <span class="skw">wait</span>(<span class="dig">10</span>)
+            validate()
+    <span class="kw">elif</span>(exists(<img src="1546509863556.png" />)):
+        authorizeAndUpload()
+        <span class="skw">wait</span>(<span class="dig">10</span>)
+        validate()
+
+
+
+opentestImage()
+<span class="skw">wait</span>(<span class="dig">2</span>)
+<span class="skw">find</span>(<img src="1543992785068.png" />)
+<span class="skw">click</span>(Pattern(<img src="1543992785068.png" />).targetOffset(-<span class="dig">12</span>,<span class="dig">0</span>))
+<span class="skw">wait</span>(<span class="dig">2</span>)
+<span class="skw">find</span>(<span class="str">"Flicker.PNG"</span>)
+<span class="skw">click</span>(<span class="str">"Flicker.PNG"</span>)
+<span class="skw">wait</span>(<span class="dig">5</span>)
+<span class="kw">if</span>(exists(<img src="1546508979791.png" />)):
+    <span class="skw">find</span>(<img src="1546510086268.png" />)
+    <span class="skw">click</span>(<img src="1546510086268.png" />)
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+    <span class="skw">find</span>(<img src="1546509218301.png" />)
+    <span class="skw">click</span>(<img src="1546509235029.png" />)
+    basicUploadWorkFlow()
+
+
+<span class="kw">elif</span>(exists(<img src="1546509218301.png" />)):
+    <span class="skw">click</span>(<img src="1546509235029.png" />)
+    basicUploadWorkFlow()
+</pre>
+</body>
+</html>

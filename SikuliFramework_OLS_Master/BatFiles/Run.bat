@@ -1,0 +1,1 @@
+C:\Users\prakasku\Downloads\runsikulix.cmd -r C:\Users\prakasku\Desktop\SikuliFramework_PSE2019\TestScripts\TestDriver.sikuli --args "ExecutionviaJenkins" -Dsikuli.Debug=3
